@@ -1,8 +1,0 @@
-Style
-
-Input error checking
-input - number
-
-default values
-
-mobile / desktop style?
