@@ -8,19 +8,19 @@
   <link rel="stylesheet" href="Dice.css">
 </head>
 <body>
-  <header>
-    <h1>Roll 'Em!</h1>
-  </header>
-  <section>
-    <input type="text" placeholder="number" id="numberOfDice">
-    <p>d</p>
-    <input type="text" placeholder="maximum" id="maxNumber">
-    <input type="submit" value="Roll" id="rollDice" onClick="rollDice()">
-    <p id="result"></p>
+
+  <section class="dice-roller">
+      <h1>Roll 'Em!</h1>
+      <form onsubmit="rollDice()" id="dice-form">
+        <input type="number" placeholder="number" id="numberOfDice">
+        <p>d</p>
+        <input type="number" placeholder="maximum" id="maxNumber">
+        <input type="number" placeholder="modifier" id="modNumber">
+        <button type="submit">Roll</button>
+      </form>
+      <p id="result">enter a number of dice and maximum value of the dice</p>
   </section>
 
-  <footer></footer>
-  
   <script src="Dice.js"></script>
 </body>
 </html>
