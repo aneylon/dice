@@ -1,79 +1,97 @@
-body {
-  background: #000;
+* {
   font-family: sans-serif;
 }
 
-.dice-roller {
-  background: #585858;
-  text-align: center;
+#dice {
   margin: auto;
-  max-width: 650px;
-  margin-top: 50px;
-  padding: 15px;
+  margin-top: 75px;
+  width: 500px;
+  box-shadow: 0px 0px 15px #ddd;
+  padding-bottom: 5px;
 }
-
-.dice-roller * {
-  font-size: 1em;
+#dice > h1 {
+  text-align: center;
+  font-size: 3.5em;
+  padding: 15px;
+  background: #ddd;
+}
+#dice > form {
+  margin: auto;
+  width: 450px;
+  text-align: center;
+}
+#dice > form > span {
+  padding: 10px;
+  font-size: 1.5em;
+}
+#dice > form > button {
   border: none;
-}
-
-.dice-roller h1 {
-  font-size: 2.5em;
-  background: #d6d3d3;
-  padding: 15px;
-}
-
-.dice-roller p {
-  display: inline-block;
-  padding: 15px;
-  margin: 5px;
-  background: #7d7d7d;
-}
-.dice-roller input {
-  padding: 15px;
-  margin: 5px;
-  width: 100px;
-  text-align: center;
-  display: inline-block;
-  background: #69ecbd;
-  color: #fff;
-}
-::-webkit-input-placeholder { /* Chrome */
-  color: #000;
-  opacity: 0.5;
-}
-:-ms-input-placeholder { /* IE 10+ */
-  color: #000;
-  opacity: 0.5;
-}
-::-moz-placeholder { /* Firefox 19+ */
-  color: #000;
-  opacity: 0.5;
-}
-:-moz-placeholder { /* Firefox 4 - 18 */
-  color: #000;
-  opacity: 0.5;
-}
-
-.dice-roller button {
-  padding: 15px;
-  display: inline-block;
-  margin: auto;
-  background: #ec814d;
-  color: #fff;
-  border-radius: 5px;
-}
-.dice-roller button:hover {
-  background: #f59f76;
-}
-
-.dice-roller #result {
-  background: #7d7d7d;
-  color: #fff;
-  padding: 15px;
-  margin: auto;
-  margin: 15px;
-  display: block;
+  border-radius: 50%;
   font-size: 2em;
+  color: #fff;
+  background: #f65336;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+#dice > form > button:hover {
+  background: #de683c;
+}
+#dice #message {
+  color: #ff0000;
+  font-size: .85em
+}
+
+#dice input {
+  padding: 10px;
+  text-align: center;
+  font-size: 1em;
+  width: 125px;
+  border: none;
+  border-bottom: solid #6c6cf1 2px;
+}
+#dice #diceCollection {
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  text-align: center;
+}
+#dice #extras {
+  text-align: center;
+  margin: auto;
+  padding: 15px;
+}
+#dice #extras button {
+  padding: 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  width: 65px;
+  font-size: 1em;
   font-weight: bolder;
+}
+#dice #roll {
+  background: #8ad15a;
+  color: #fff;
+}
+#dice #roll:hover {
+  background: #97c975;
+}
+#dice #clear {
+  background: #6c6cf1;
+  color: #fff;
+}
+#dice #clear:hover {
+  background: #8484f9;
+}
+#dice #resultPane {
+  margin: 25px;
+  padding: 25px;
+  background: #ddd;
+  /*box-shadow: 0px 0px 5px #ddd;*/
+  font-size: 1.5em;
+  text-align: center;
+}
+#footer {
+  text-align: center;
 }

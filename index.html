@@ -4,23 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Dice Roller</title>
   <link rel="stylesheet" href="Dice.css">
 </head>
 <body>
+  <section id="dice">
+    <h1>Lets Roll!</h1>
+    <form action="submit" onsubmit="diceRoller.add()" id="diceAddForm">
+      <input type="number" id="numberOfDice" placeholder="number of dice">
+      <span>d</span>
+      <input type="number" id="maxValueOfDice" placeholder="max value">
+      <button type="submit">+</button>
+      <p id="message"></p>
+    </form>
 
-  <section class="dice-roller">
-      <h1>Roll 'Em!</h1>
-      <form onsubmit="rollDice()" id="dice-form">
-        <input type="number" placeholder="number" id="numberOfDice">
-        <p>d</p>
-        <input type="number" placeholder="maximum" id="maxNumber">
-        <input type="number" placeholder="modifier" id="modNumber">
-        <button type="submit">Roll</button>
-      </form>
-      <p id="result">enter a number of dice and maximum value of the dice</p>
+    <div id="diceCollection">
+      <!-- new dice will be appended here -->
+    </div>
+
+    <div id="extras">
+      <input type="number" id="modifier" placeholder="modifier">
+      <button onClick="diceRoller.roll()" id="roll">Roll</button>
+      <button onClick="diceRoller.clear()" id="clear">Clear</button>
+    </div>
+
+    <div id="resultPane">
+      Result: <span id="result"></span>
+    </div>
+
   </section>
-
+  <section id="footer">
+    <p>view the project on <a href="https://www.github.com/aneylon/dice">Github</a>.</p>
+  </section>
   <script src="Dice.js"></script>
 </body>
 </html>
