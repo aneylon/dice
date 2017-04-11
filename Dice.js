@@ -35,13 +35,18 @@ let diceRoller = (function(){
     result.innerHTML = ''
     let total = 0
 
-    dice.forEach(die => {
-      for(var i = 0; i < die.number; i++){
-        total += getRand(die.maxValue)
-      }
-    })
+    if(dice.length === 0){
+      total = 'Please add some dice.'
+    } else {
+      dice.forEach(die => {
+        for(var i = 0; i < die.number; i++){
+          total += getRand(die.maxValue)
+        }
+      })
 
-    total += Number(modifierEl.value)
+      total += Number(modifierEl.value)
+    }
+
     setTimeout(function(){
       result.innerHTML = total
     },500)
